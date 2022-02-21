@@ -7,4 +7,5 @@ class RegisterPage(BasePage):
         self.should_be_customer_form()
 
     def should_be_customer_form(self):
-        self.is_element_present(RegisterPageLocators.CUSTOMER_FORM)
+        assert self.is_element_present(*RegisterPageLocators.RIGHT_PANEL), "Right panel is not present"
+        assert self.is_element_present(*RegisterPageLocators.CUSTOMER_FORM), "Customer form is not present"
