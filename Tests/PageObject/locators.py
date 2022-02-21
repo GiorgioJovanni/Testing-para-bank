@@ -10,6 +10,7 @@ class BasePageLocators:
 
 
 class RegisterPageLocators:
+    CUSTOMER_FORM = (By.CSS_SELECTOR, '#customerForm')
     FIELD_FIRST_NAME = (By.CSS_SELECTOR, '[name = "customer.firstName"]')
     FIELD_LAST_NAME = (By.CSS_SELECTOR, '[name="customer.lastName"]')
     FIELD_ADDRESS = (By.CSS_SELECTOR, '[name="customer.address.street"]')
