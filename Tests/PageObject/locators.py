@@ -6,7 +6,7 @@ class BasePageLocators:
     FIELD_PASSWORD = (By.CSS_SELECTOR, 'input[name="password"]')
     BUTTON_LOG_IN = (By.CSS_SELECTOR, 'input[value="Log In"]')
     BUTTON_FORGOT_LOGIN = (By.CSS_SELECTOR, 'a[href="lookup.htm"]')
-    BUTTON_REGISTER = (By.CSS_SELECTOR, 'a[href="register.htm"]')
+    BUTTON_REGISTER = (By.XPATH, '//*[@id="loginPanel"]/p[2]/a')
 
 
 class RegisterPageLocators:
@@ -24,3 +24,4 @@ class RegisterPageLocators:
     FIELD_PASSWORD = (By.CSS_SELECTOR, '[name="customer.password"]')
     FIELD_CONFIRM = (By.CSS_SELECTOR, '[name="repeatedPassword"]')
     BUTTON_REGISTER = (By.CSS_SELECTOR, '[value="Register"]')
+    TEXT_WELCOME = (By.CSS_SELECTOR, '#rightPanel > p')

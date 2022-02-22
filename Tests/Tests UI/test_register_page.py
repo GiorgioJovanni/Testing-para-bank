@@ -8,3 +8,8 @@ def test_guest_can_register(browser):
     page.open()
     page.click_on_button(*BasePageLocators.BUTTON_REGISTER)
     page.guest_can_go_to_register_page()
+    page.register_new_fake_user()
+
+
+def test_register(browser):
+    pass
