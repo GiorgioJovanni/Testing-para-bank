@@ -1,4 +1,5 @@
 import requests
+from BaseClass import BaseParaBank
 
 headers = {"Accept": "application/json"}
 base_uri = 'https://parabank.parasoft.com/parabank/services/bank'
@@ -6,7 +7,7 @@ account_id = 12345
 amount = 5000
 
 
-class TestGet(BaseParaBank):
+class TestParaBank:
 
     def test_get_account_by_id(self):
         response = requests.get(f"{base_uri}/accounts/{account_id}", headers=headers)
