@@ -6,7 +6,7 @@ account_id = 12345
 amount = 5000
 
 
-class TestGet(BaseClass):
+class TestGet(BaseParaBank):
 
     def test_get_account_by_id(self):
         response = requests.get(f"{base_uri}/accounts/{account_id}", headers=headers)
