@@ -3,6 +3,5 @@ import requests
 
 class BaseClass:
 
-    def __init__(self):
-
-    pass
+    def get(self, url: str, params=None, id_token=False, check_response=False):
+        pass
