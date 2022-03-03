@@ -9,3 +9,4 @@ def test_check_status_code_equals_200():
     else:
         print('Response Failed')
     # assert response_restore_password_page.status_code == 200, 'Response Failed'
+    # assert response_restore_password_page.status_code == 200, 'Response Failed'
