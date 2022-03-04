@@ -21,7 +21,7 @@ def test_register(browser):
     # page.open()
     # text = browser.find_element(*BasePageLocators.TEXT).get_attribute('textContent')
     i = 0
-    while i < 30:
+    while i < 20:
         id_account = randint(10000, 99999)
         link = f"https://parabank.parasoft.com/parabank/services/bank/accounts/{id_account}"
         page = RegisterPage(browser, link)
