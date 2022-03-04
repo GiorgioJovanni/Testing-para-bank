@@ -15,19 +15,18 @@ def test_guest_can_register(browser):
 
 
 def test_register(browser):
-    id_account = randint(10, 99)
-    link = f"https://parabank.parasoft.com/parabank/services/bank/accounts/123{id_account}"
-    page = RegisterPage(browser, link)
-    page.open()
-    text = browser.find_element(*BasePageLocators.TEXT).get_attribute('textContent')
+    # id_account = randint(100000, 999999)
+    # link = f"https://parabank.parasoft.com/parabank/services/bank/accounts/{id_account}"
+    # page = RegisterPage(browser, link)
+    # page.open()
+    # text = browser.find_element(*BasePageLocators.TEXT).get_attribute('textContent')
     i = 0
-    while i < 100:
-        id_account = randint(10, 99)
-        link = f"https://parabank.parasoft.com/parabank/services/bank/accounts/123{id_account}"
+    while i < 30:
+        id_account = randint(10000, 99999)
+        link = f"https://parabank.parasoft.com/parabank/services/bank/accounts/{id_account}"
         page = RegisterPage(browser, link)
         page.open()
         i += 1
-    print(id_account)
 
     """
     Could not find account #85672
