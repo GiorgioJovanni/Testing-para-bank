@@ -2,6 +2,12 @@ from selenium.webdriver.common.by import By
 
 
 class BasePageLocators:
+    MESSAGE = (By.CSS_SELECTOR, '#message')
+    LINK = (By.CSS_SELECTOR, '#rightPanel > p:nth-child(4) > a')
+    IMAGE = (By.CSS_SELECTOR, 'span.services')
+    BUTTON_GO_BASE_PAGE = (By.CSS_SELECTOR, 'li.home')
+    BUTTON_GO_ABOUTUS_PAGE = (By.CSS_SELECTOR, 'li.aboutus')
+    BUTTON_GO_CONTACT_PAGE = (By.CSS_SELECTOR, 'li.contact')
     FIELD_USERNAME = (By.CSS_SELECTOR, 'input[name="username"]')
     FIELD_PASSWORD = (By.CSS_SELECTOR, 'input[name="password"]')
     BUTTON_LOG_IN = (By.CSS_SELECTOR, 'input[value="Log In"]')

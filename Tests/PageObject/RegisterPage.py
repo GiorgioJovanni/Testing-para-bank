@@ -32,5 +32,3 @@ class RegisterPage(BasePage):
         self.click_on_button(*RegisterPageLocators.BUTTON_REGISTER)
         assert self.is_element_present(*RegisterPageLocators.TEXT_WELCOME), "Text welcome is not present"
 
-    def crete_new_user(self):
-        pass
