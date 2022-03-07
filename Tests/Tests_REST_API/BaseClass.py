@@ -16,7 +16,4 @@ class BaseParaBank:
     def post(self, url, headers):
         r = requests.post(url, headers=headers)
         post_response = (json.loads(r.text), r) if r.text else ({}, r)
-
-        if check_response and not r.ok:
-            pytest.fail(f"SERVER ERROR - {r.status_code, post_response[0]['message']}")
         return post_response

@@ -1,8 +1,14 @@
+from random import randint
+
 import requests
+
+from Tests.Tests_REST_API.BaseClass import BaseParaBank
 
 base_uri = 'https://parabank.parasoft.com/parabank/services/bank'
 account_id = 12345
 amount = 5000
+new_account_id = randint(10000, 99999)
+newAccountType = 0
 
 
 class TestParaBank:
@@ -30,6 +36,7 @@ class TestParaBank:
 
     def test_post_new_account(self):
         headers = {"Accept": "application/json"}
-        response = requests.post(f"{base_uri}/createAccount?customerId=19999&newAccountType=2&fromAccount"
-                                 f"Id=12345", headers=headers)
+        response = requests.post(f"{base_uri}/createAccount?customerId={new_account_id}&newAccountType={newAccountType}"
+                                 f"&fromAccountId={account_id}", headers=headers)
+        print(f"{response.text}")
         # assert response.status_code == 200
