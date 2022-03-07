@@ -13,7 +13,7 @@ username = 'ivan'
 password = 'ivan123'
 
 
-class TestParaBank(ParaBankHomePage):
+class TestParaBank:
 
     def test_get_account_by_id(self):
         headers = {"Accept": "application/json"}
