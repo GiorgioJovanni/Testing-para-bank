@@ -1,5 +1,3 @@
-import time
-
 import faker
 
 from Tests.PageObject.BasePage import BasePage
@@ -35,7 +33,6 @@ class RegisterPage(BasePage):
         assert self.is_not_element_present(*RegisterPageLocators.BUTTON_REGISTER), "Text welcome is not present"
 
     def negative_register_new_fake_user(self):
-
         self.browser.find_element(*RegisterPageLocators.FIELD_FIRST_NAME).send_keys(first_name)
         self.browser.find_element(*RegisterPageLocators.FIELD_LAST_NAME).send_keys(last_name)
         # self.browser.find_element(*RegisterPageLocators.FIELD_ADDRESS).send_keys('New York')
