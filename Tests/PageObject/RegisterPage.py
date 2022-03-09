@@ -30,7 +30,7 @@ class RegisterPage(BasePage):
         self.browser.find_element(*RegisterPageLocators.FIELD_PASSWORD).send_keys(password)
         self.browser.find_element(*RegisterPageLocators.FIELD_CONFIRM).send_keys(password)
         self.click_on_button(*RegisterPageLocators.BUTTON_REGISTER)
-        assert self.is_not_element_present(*RegisterPageLocators.BUTTON_REGISTER), "Text welcome is not present"
+        assert self.is_not_element_present(*RegisterPageLocators.BUTTON_REGISTER), "Button register is not disappear"
 
     def negative_register_new_fake_user(self):
         self.browser.find_element(*RegisterPageLocators.FIELD_FIRST_NAME).send_keys(first_name)
