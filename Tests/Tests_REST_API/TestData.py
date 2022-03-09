@@ -10,7 +10,7 @@ class DataTest:
     password = 'ivan123'
 
 
-class DataEndPoint:
+class DataEndPoints:
     base_uri = 'https://parabank.parasoft.com/parabank/services/bank'
     getAccountId = f"/accounts/{DataTest.customerId}"
     getListTransactionForAccount = f"/accounts/{DataTest.customerId}/transactions"
