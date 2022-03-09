@@ -31,4 +31,4 @@ class RegisterPageLocators:
     FIELD_PASSWORD = (By.CSS_SELECTOR, '[name="customer.password"]')
     FIELD_CONFIRM = (By.CSS_SELECTOR, '[name="repeatedPassword"]')
     BUTTON_REGISTER = (By.CSS_SELECTOR, '[value="Register"]')
-    TEXT_WELCOME = (By.CSS_SELECTOR, '#rightPanel > p')
+    TEXT_ERROR = (By.CSS_SELECTOR, 'span.error')
