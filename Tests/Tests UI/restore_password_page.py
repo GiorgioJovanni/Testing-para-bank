@@ -10,15 +10,14 @@ driver.get('https://parabank.parasoft.com/parabank/lookup.htm')
 
 
 def test_account_validate():
-    element_firstName = driver.find_element(By.ID,
-                                            'firstName')  # 'Last Name', 'Address', 'City', 'State', 'Zip Code', 'SSN'
-    element_firstName.send_keys('First Name')
+    element_first_name = driver.find_element(By.ID, 'firstName')  # 'Last Name', 'Address', 'City', 'State', 'Zip Code', 'SSN'
+    element_first_name.send_keys('First Name')
 
-    element_lastName = driver.find_element(By.ID, 'lastName')
-    element_lastName.send_keys('Last Name')
+    element_last_name = driver.find_element(By.ID, 'lastName')
+    element_last_name.send_keys('Last Name')
 
-    element_Address = driver.find_element(By.ID, 'address.street')
-    element_Address.send_keys('Address')
+    element_address = driver.find_element(By.ID, 'address.street')
+    element_address.send_keys('Address')
 
     element_address_city = driver.find_element(By.ID, 'address.city')
     element_address_city.send_keys('City')
@@ -26,8 +25,8 @@ def test_account_validate():
     element_address_state = driver.find_element(By.ID, 'address.state')
     element_address_state.send_keys('State')
 
-    element_address_zipCode = driver.find_element(By.ID, 'address.zipCode')
-    element_address_zipCode.send_keys('12345')
+    element_address_zipcode = driver.find_element(By.ID, 'address.zipCode')
+    element_address_zipcode.send_keys('12345')
 
     element_ssn = driver.find_element(By.ID, 'ssn')
     element_ssn.send_keys('1234567890')
@@ -47,15 +46,15 @@ def test_account_validate():
 
 
 def test_account_validate_wrongdata():  # wrong element_ssn
-    element_firstName = driver.find_element(By.ID,
+    element_first_name = driver.find_element(By.ID,
                                             'firstName')  # 'Last Name', 'Address', 'City', 'State', 'Zip Code', 'SSN'
-    element_firstName.send_keys('First Name')
+    element_first_name.send_keys('First Name')
 
-    element_lastName = driver.find_element(By.ID, 'lastName')
-    element_lastName.send_keys('Last Name')
+    element_last_name = driver.find_element(By.ID, 'lastName')
+    element_last_name.send_keys('Last Name')
 
-    element_Address = driver.find_element(By.ID, 'address.street')
-    element_Address.send_keys('Address')
+    element_address = driver.find_element(By.ID, 'address.street')
+    element_address.send_keys('Address')
 
     element_address_city = driver.find_element(By.ID, 'address.city')
     element_address_city.send_keys('City')
@@ -63,8 +62,8 @@ def test_account_validate_wrongdata():  # wrong element_ssn
     element_address_state = driver.find_element(By.ID, 'address.state')
     element_address_state.send_keys('State')
 
-    element_address_zipCode = driver.find_element(By.ID, 'address.zipCode')
-    element_address_zipCode.send_keys('12345')
+    element_address_zipcode = driver.find_element(By.ID, 'address.zipCode')
+    element_address_zipcode.send_keys('12345')
 
     element_ssn = driver.find_element(By.ID, 'ssn')
     element_ssn.send_keys('12345678901')
