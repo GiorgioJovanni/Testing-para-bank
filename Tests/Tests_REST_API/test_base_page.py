@@ -1,4 +1,4 @@
-from Tests.Tests_REST_API.HomePage import ParaBankHomePage
+from Tests.Tests_REST_API.BaseClass import ParaBankHomePage
 from Tests.Tests_REST_API.TestData import DataEndPoints
 
 
