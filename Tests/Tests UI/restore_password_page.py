@@ -10,7 +10,8 @@ driver.get('https://parabank.parasoft.com/parabank/lookup.htm')
 
 
 def test_account_validate():
-    element_firstName = driver.find_element(By.ID,'firstName')  # 'Last Name', 'Address', 'City', 'State', 'Zip Code', 'SSN'
+    element_firstName = driver.find_element(By.ID,
+                                            'firstName')  # 'Last Name', 'Address', 'City', 'State', 'Zip Code', 'SSN'
     element_firstName.send_keys('First Name')
 
     element_lastName = driver.find_element(By.ID, 'lastName')
@@ -36,16 +37,18 @@ def test_account_validate():
 
     driver.current_url
     expected_customer_lookup_message = 'Your login information was located successfully. You are now logged in.'
-    #assert expected_customer_lookup_message == driver.find_element(By.XPATH, '//div[@id="rightPanel"]/p[1]')
+    # assert expected_customer_lookup_message == driver.find_element(By.XPATH, '//div[@id="rightPanel"]/p[1]')
     element = driver.find_element(By.XPATH, '//div[@id="rightPanel"]/p[1]')
-    #print(element.text)
+    # print(element.text)
     assert element.text == expected_customer_lookup_message, 'The customer information provided could not be found.'
-    #print(expected_customer_lookup_message.text)
+    # print(expected_customer_lookup_message.text)
     # Your login information was located successfully. You are now logged in.
     driver.quit()
 
-def test_account_validate_wrongdata():
-    element_firstName = driver.find_element(By.ID,'firstName')  # 'Last Name', 'Address', 'City', 'State', 'Zip Code', 'SSN'
+
+def test_account_validate_wrongdata():  # wrong element_ssn
+    element_firstName = driver.find_element(By.ID,
+                                            'firstName')  # 'Last Name', 'Address', 'City', 'State', 'Zip Code', 'SSN'
     element_firstName.send_keys('First Name')
 
     element_lastName = driver.find_element(By.ID, 'lastName')
@@ -72,5 +75,3 @@ def test_account_validate_wrongdata():
     element = driver.find_element(By.XPATH, '//div[@id="rightPanel"]/p')
     assert element.text == expected_customer_lookup_message
     driver.quit()
-
-
