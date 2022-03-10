@@ -41,10 +41,10 @@ class RegisterPage(BasePage):
     def add_phone(self):
         self.browser.find_element(*RegisterPageLocators.FIELD_PHONE).send_keys('+01234241231')
 
-    def add_text_in_border_snn(self):
+    def add_snn(self):
         self.browser.find_element(*RegisterPageLocators.FIELD_SNN).send_keys('23412341234123')
 
-    def add_text_in_border_username(self):
+    def add_username(self):
         self.browser.find_element(*RegisterPageLocators.FIELD_USERNAME).send_keys(f"-1{first_name}1-")
 
     def add_password(self):
