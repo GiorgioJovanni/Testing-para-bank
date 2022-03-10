@@ -1,19 +1,30 @@
+from Tests.PageObject.Constants import EndPoint
 from Tests.PageObject.RegisterPage import RegisterPage
 from Tests.PageObject.locators import BasePageLocators
 
-base_link = "http://parabank.parasoft.com"
-
 
 def test_guest_can_register(browser):
-    page = RegisterPage(browser, base_link)
+    page = RegisterPage(browser, EndPoint.base_link)
     page.open()
     page.click_on_button(*BasePageLocators.BUTTON_REGISTER)
     page.open_register_page()
-    page.register_new_fake_user()
+    page.add_text_in_border_first_name()
+    page.add_text_in_border_last_name()
+    page.add_text_in_border_address()
+    page.add_text_in_border_city()
+    page.add_text_in_border_state()
+    page.add_text_in_border_zipcode()
+    page.add_text_in_border_phone()
+    page.add_text_in_border_snn()
+    page.add_text_in_border_username()
+    page.add_text_in_border_password()
+    page.add_text_in_border_confirm()
+    page.press_the_button_register()
+    page.should_not_be_button_register()
 
 
 def test_guest_use_buttons_gohome_contact_aboutus_from_register_page(browser):
-    page = RegisterPage(browser, base_link)
+    page = RegisterPage(browser, EndPoint.base_link)
     page.open()
     page.click_on_button(*BasePageLocators.BUTTON_REGISTER)
     page.open_register_page()
@@ -28,29 +39,73 @@ def test_guest_use_buttons_gohome_contact_aboutus_from_register_page(browser):
 
 class TestNegative:
     def test_negative_guest_can_register_address(self, browser):
-        page = RegisterPage(browser, base_link)
+        page = RegisterPage(browser, EndPoint.base_link)
         page.open()
         page.click_on_button(*BasePageLocators.BUTTON_REGISTER)
         page.open_register_page()
-        page.register_new_fake_user_without_address()
+        page.add_text_in_border_first_name()
+        page.add_text_in_border_last_name()
+        page.add_text_in_border_city()
+        page.add_text_in_border_state()
+        page.add_text_in_border_zipcode()
+        page.add_text_in_border_phone()
+        page.add_text_in_border_snn()
+        page.add_text_in_border_username()
+        page.add_text_in_border_password()
+        page.add_text_in_border_confirm()
+        page.press_the_button_register()
+        page.should_be_text_error()
 
     def test_negative_guest_can_register_city(self, browser):
-        page = RegisterPage(browser, base_link)
+        page = RegisterPage(browser, EndPoint.base_link)
         page.open()
         page.click_on_button(*BasePageLocators.BUTTON_REGISTER)
         page.open_register_page()
-        page.register_new_fake_user_without_city()
-
-    def test_negative_guest_can_register_zipcode(self, browser):
-        page = RegisterPage(browser, base_link)
-        page.open()
-        page.click_on_button(*BasePageLocators.BUTTON_REGISTER)
-        page.open_register_page()
-        page.register_new_fake_user_without_zipcode()
+        page.add_text_in_border_first_name()
+        page.add_text_in_border_last_name()
+        page.add_text_in_border_address()
+        page.add_text_in_border_state()
+        page.add_text_in_border_zipcode()
+        page.add_text_in_border_phone()
+        page.add_text_in_border_snn()
+        page.add_text_in_border_username()
+        page.add_text_in_border_password()
+        page.add_text_in_border_confirm()
+        page.press_the_button_register()
+        page.should_be_text_error()
 
     def test_negative_guest_can_register_state(self, browser):
-        page = RegisterPage(browser, base_link)
+        page = RegisterPage(browser, EndPoint.base_link)
         page.open()
         page.click_on_button(*BasePageLocators.BUTTON_REGISTER)
         page.open_register_page()
-        page.register_new_fake_user_without_state()
+        page.add_text_in_border_first_name()
+        page.add_text_in_border_last_name()
+        page.add_text_in_border_address()
+        page.add_text_in_border_city()
+        page.add_text_in_border_zipcode()
+        page.add_text_in_border_phone()
+        page.add_text_in_border_snn()
+        page.add_text_in_border_username()
+        page.add_text_in_border_password()
+        page.add_text_in_border_confirm()
+        page.press_the_button_register()
+        page.should_be_text_error()
+
+    def test_negative_guest_can_register_zipcode(self, browser):
+        page = RegisterPage(browser, EndPoint.base_link)
+        page.open()
+        page.click_on_button(*BasePageLocators.BUTTON_REGISTER)
+        page.open_register_page()
+        page.add_text_in_border_first_name()
+        page.add_text_in_border_last_name()
+        page.add_text_in_border_address()
+        page.add_text_in_border_city()
+        page.add_text_in_border_state()
+        page.add_text_in_border_phone()
+        page.add_text_in_border_snn()
+        page.add_text_in_border_username()
+        page.add_text_in_border_password()
+        page.add_text_in_border_confirm()
+        page.press_the_button_register()
+        page.should_be_text_error()
