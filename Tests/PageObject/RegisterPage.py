@@ -1,7 +1,7 @@
 import faker
 
 from Tests.PageObject.BasePage import BasePage
-from Tests.PageObject.locators import RegisterPageLocators
+from Tests.PageObject.locators import RegisterPageLocators, BasePageLocators
 
 fake = faker.Faker()
 password = fake.password()
@@ -20,25 +20,25 @@ class RegisterPage(BasePage):
     def should_be_form(self):
         assert self.is_element_present(*RegisterPageLocators.CUSTOMER_FORM), "Customer form is not present"
 
-    def add_text_in_border_first_name(self):
+    def add_first_name(self):
         self.browser.find_element(*RegisterPageLocators.FIELD_FIRST_NAME).send_keys(first_name)
 
-    def add_text_in_border_last_name(self):
+    def add_last_name(self):
         self.browser.find_element(*RegisterPageLocators.FIELD_LAST_NAME).send_keys(last_name)
 
-    def add_text_in_border_address(self):
+    def add_address(self):
         self.browser.find_element(*RegisterPageLocators.FIELD_ADDRESS).send_keys('New York')
 
-    def add_text_in_border_city(self):
+    def add_city(self):
         self.browser.find_element(*RegisterPageLocators.FIELD_CITY).send_keys('New York')
 
-    def add_text_in_border_state(self):
+    def add_state(self):
         self.browser.find_element(*RegisterPageLocators.FIELD_STATE).send_keys('New York')
 
-    def add_text_in_border_zipcode(self):
+    def add_zipcode(self):
         self.browser.find_element(*RegisterPageLocators.FIELD_ZIPCODE).send_keys('0007')
 
-    def add_text_in_border_phone(self):
+    def add_phone(self):
         self.browser.find_element(*RegisterPageLocators.FIELD_PHONE).send_keys('+01234241231')
 
     def add_text_in_border_snn(self):
@@ -47,14 +47,17 @@ class RegisterPage(BasePage):
     def add_text_in_border_username(self):
         self.browser.find_element(*RegisterPageLocators.FIELD_USERNAME).send_keys(f"-1{first_name}1-")
 
-    def add_text_in_border_password(self):
+    def add_password(self):
         self.browser.find_element(*RegisterPageLocators.FIELD_PASSWORD).send_keys(password)
 
-    def add_text_in_border_confirm(self):
+    def add_confirm(self):
         self.browser.find_element(*RegisterPageLocators.FIELD_CONFIRM).send_keys(password)
 
     def press_the_button_register(self):
         self.click_on_button(*RegisterPageLocators.BUTTON_REGISTER)
+
+    def press_the_button_go_to_register(self):
+        self.click_on_button(*BasePageLocators.BUTTON_REGISTER)
 
     def should_not_be_button_register(self):
         assert self.is_not_element_present(*RegisterPageLocators.BUTTON_REGISTER), "Button register is not disappear"
