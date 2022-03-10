@@ -10,9 +10,6 @@ last_name = fake.last_name()
 
 
 class RegisterPage(BasePage):
-    def open_register_page(self):
-        self.should_be_panel()
-        self.should_be_form()
 
     def should_be_panel(self):
         assert self.is_element_present(*RegisterPageLocators.RIGHT_PANEL), "Right panel is not present"
