@@ -10,7 +10,7 @@ last_name = fake.last_name()
 
 
 class RegisterPage(BasePage):
-    def guest_can_go_to_register_page(self):
+    def open_register_page(self):
         self.should_be_customer_form()
 
     def should_be_customer_form(self):
