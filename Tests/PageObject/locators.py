@@ -46,6 +46,7 @@ class RegisterPageLocators:
     TEXT_ERROR_ZIPCODE = (By.CSS_SELECTOR, '#customerForm > table > tbody > tr:nth-child(6) >'
                                            ' td:nth-child(3) span.error')
 
+
 class AboutUsPageLocators:
     LINK = (By.XPATH, '//*[@id="rightPanel"]/p[3]/a')
 
