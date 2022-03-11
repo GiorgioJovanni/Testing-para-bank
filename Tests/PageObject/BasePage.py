@@ -77,3 +77,6 @@ class BasePage:
     def button_go_admin_page(self):
         self.click_on_button(*BasePageLocators.BUTTON_ADMIN_PAGE)
         assert self.is_element_present(*AdminPagePageLocators.BOARD)
+
+    def press_the_button_register_base(self):
+        self.click_on_button(*BasePageLocators.BUTTON_REGISTER)
