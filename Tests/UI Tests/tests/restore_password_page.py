@@ -1,13 +1,14 @@
-import faker
-import pytest
+import time
+
+
 from selenium import webdriver
 from selenium.webdriver import Keys
 from selenium.webdriver.common.by import By
 
-# global driver
+
 driver = webdriver.Edge()
 driver.get('https://parabank.parasoft.com/parabank/lookup.htm')
-
+driver.delete_all_cookies()
 
 def test_account_validate():
     element_first_name = driver.find_element(By.ID, 'firstName')  # 'Last Name', 'Address', 'City', 'State', 'Zip Code', 'SSN'
@@ -33,13 +34,13 @@ def test_account_validate():
 
     element_ssn.send_keys(Keys.RETURN)
     # The customer information provided could not be found.
-
+    #time.sleep(5)
     driver.current_url
     expected_customer_lookup_message = 'Your login information was located successfully. You are now logged in.'
     # assert expected_customer_lookup_message == driver.find_element(By.XPATH, '//div[@id="rightPanel"]/p[1]')
-    element = driver.find_element(By.XPATH, '//div[@id="rightPanel"]/p[1]')
+    current_element = driver.find_element(By.XPATH, '//div[@id="rightPanel"]/p[1]')
     # print(element.text)
-    assert element.text == expected_customer_lookup_message, 'The customer information provided could not be found.'
+    assert current_element.text == expected_customer_lookup_message, 'The customer information provided could not be found.'
     # print(expected_customer_lookup_message.text)
     # Your login information was located successfully. You are now logged in.
     driver.quit()
@@ -69,8 +70,9 @@ def test_account_validate_wrongdata():  # wrong element_ssn
     element_ssn.send_keys('12345678901')
 
     element_ssn.send_keys(Keys.RETURN)
+    time.sleep(2)
 
     expected_customer_lookup_message = 'The customer information provided could not be found.'
-    element = driver.find_element(By.XPATH, '//div[@id="rightPanel"]/p')
-    assert element.text == expected_customer_lookup_message
+    current_element = driver.find_element(By.XPATH, '//div[@id="rightPanel"]/p')
+    assert current_element.text == expected_customer_lookup_message
     driver.quit()
