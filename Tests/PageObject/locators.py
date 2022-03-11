@@ -39,6 +39,7 @@ class RegisterPageLocators:
     FIELD_PASSWORD = (By.CSS_SELECTOR, '[name="customer.password"]')
     FIELD_CONFIRM = (By.CSS_SELECTOR, '[name="repeatedPassword"]')
     BUTTON_REGISTER = (By.CSS_SELECTOR, '[value="Register"]')
+
     TEXT_ERROR_ADDRESS = (By.CSS_SELECTOR, '#customerForm > table > tbody > tr:nth-child(3) >'
                                            ' td:nth-child(3) span.error')
     TEXT_ERROR_CITY = (By.CSS_SELECTOR, '#customerForm > table > tbody > tr:nth-child(4) > td:nth-child(3) span.error')
