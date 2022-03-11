@@ -1,3 +1,5 @@
+import time
+
 from Tests.PageObject.Constants import EndPoint
 from Tests.PageObject.RegisterPage import RegisterPage
 
@@ -56,7 +58,7 @@ class TestNegative:
         page.add_password()
         page.add_confirm()
         page.press_the_button_register()
-        page.should_be_text_error()
+        page.should_be_text_error_address()
 
     def test_negative_guest_can_register_city(self, browser):
         page = RegisterPage(browser, EndPoint.base_link)
@@ -75,7 +77,7 @@ class TestNegative:
         page.add_password()
         page.add_confirm()
         page.press_the_button_register()
-        page.should_be_text_error()
+        page.should_be_text_error_city()
 
     def test_negative_guest_can_register_state(self, browser):
         page = RegisterPage(browser, EndPoint.base_link)
@@ -94,7 +96,7 @@ class TestNegative:
         page.add_password()
         page.add_confirm()
         page.press_the_button_register()
-        page.should_be_text_error()
+        page.should_be_text_error_state()
 
     def test_negative_guest_can_register_zipcode(self, browser):
         page = RegisterPage(browser, EndPoint.base_link)
@@ -113,4 +115,4 @@ class TestNegative:
         page.add_password()
         page.add_confirm()
         page.press_the_button_register()
-        page.should_be_text_error()
+        page.should_be_text_error_zipcode()

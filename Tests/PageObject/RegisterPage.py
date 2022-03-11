@@ -59,5 +59,14 @@ class RegisterPage(BasePage):
     def should_not_be_button_register(self):
         assert self.is_not_element_present(*RegisterPageLocators.BUTTON_REGISTER), "Button register is not disappear"
 
-    def should_be_text_error(self):
-        assert self.is_element_present(*RegisterPageLocators.TEXT_ERROR), "Text error is not present"
+    def should_be_text_error_address(self):
+        assert self.is_element_present(*RegisterPageLocators.TEXT_ERROR_ADDRESS), "Text error is not present"
+
+    def should_be_text_error_city(self):
+        assert self.is_element_present(*RegisterPageLocators.TEXT_ERROR_CITY), "Text error is not present"
+
+    def should_be_text_error_state(self):
+        assert self.is_element_present(*RegisterPageLocators.TEXT_ERROR_STATE), "Text error is not present"
+
+    def should_be_text_error_zipcode(self):
+        assert self.is_element_present(*RegisterPageLocators.TEXT_ERROR_ZIPCODE), "Text error is not present"

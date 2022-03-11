@@ -39,8 +39,12 @@ class RegisterPageLocators:
     FIELD_PASSWORD = (By.CSS_SELECTOR, '[name="customer.password"]')
     FIELD_CONFIRM = (By.CSS_SELECTOR, '[name="repeatedPassword"]')
     BUTTON_REGISTER = (By.CSS_SELECTOR, '[value="Register"]')
-    TEXT_ERROR = (By.CSS_SELECTOR, 'span.error')
-
+    TEXT_ERROR_ADDRESS = (By.CSS_SELECTOR, '#customerForm > table > tbody > tr:nth-child(3) >'
+                                           ' td:nth-child(3) span.error')
+    TEXT_ERROR_CITY = (By.CSS_SELECTOR, '#customerForm > table > tbody > tr:nth-child(4) > td:nth-child(3) span.error')
+    TEXT_ERROR_STATE = (By.CSS_SELECTOR, '#customerForm > table > tbody > tr:nth-child(5) > td:nth-child(3) span.error')
+    TEXT_ERROR_ZIPCODE = (By.CSS_SELECTOR, '#customerForm > table > tbody > tr:nth-child(6) >'
+                                           ' td:nth-child(3) span.error')
 
 class AboutUsPageLocators:
     LINK = (By.XPATH, '//*[@id="rightPanel"]/p[3]/a')
