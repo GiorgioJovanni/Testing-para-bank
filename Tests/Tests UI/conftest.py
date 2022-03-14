@@ -1,7 +1,7 @@
 import pytest
 from selenium import webdriver
 
-from Tests.PageObject.BasePage import BasePage
+from Tests.PageObject.HomePage import HomePage
 from Tests.PageObject.Constants import EndPoint
 from Tests.PageObject.RegisterPage import RegisterPage
 
@@ -18,10 +18,10 @@ def page_register():
 
 
 @pytest.fixture
-def page_base():
+def page_home():
     print("\nstart browser for test..")
     browser = webdriver.Chrome()
-    page = BasePage(browser, EndPoint.base_link)
+    page = HomePage(browser, EndPoint.base_link)
     page.open()
     yield page
     print("\nquit browser..")
