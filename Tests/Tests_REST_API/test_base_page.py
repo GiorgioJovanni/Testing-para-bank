@@ -1,5 +1,5 @@
 from Tests.Tests_REST_API.BaseClass import ParaBankHomePage
-from Tests.Tests_REST_API.TestData import DataEndPoints
+from Tests.Tests_REST_API.TestData import DataEndPoints, DataTest
 
 
 class TestParaBank(ParaBankHomePage):
@@ -23,7 +23,8 @@ class TestParaBank(ParaBankHomePage):
 
     def test_post_new_account(self):
         response = self.post(f"{DataEndPoints.base_uri}{DataEndPoints.newAccount}")
-        # print(response.text)
+        assert response.text == f'Could not create new account for customer {DataTest.new_account_id}' \
+                                f' from account 12656'
         assert response.status_code == 200, "           Can't get response 200 for new account"
 
     def test_get_login(self):
