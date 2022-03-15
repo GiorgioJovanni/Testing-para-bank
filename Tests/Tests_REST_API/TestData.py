@@ -2,7 +2,7 @@ from random import randint
 
 
 class DataTest:
-    customerId = '12656'
+    customerId = '12345'
     amount = '5000'
     new_account_id = str(randint(10000, 99999))
     newAccountType = '0'

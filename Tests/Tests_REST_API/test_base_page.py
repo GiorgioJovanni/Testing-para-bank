@@ -34,5 +34,5 @@ class TestParaBank(ParaBankHomePage):
         assert response.status_code == 200, "           Can't get response 200 for new account"
 
     def test_get_login(self):
-        response = self.get(f"{DataEndPoints.base_uri + DataEndPoints.login + DataTest.username}/{DataTest.password}")
+        response = self.get(f"{DataEndPoints.base_uri + DataEndPoints.login}")
         assert response.status_code == 200, "           Can't get response 200 for login"
