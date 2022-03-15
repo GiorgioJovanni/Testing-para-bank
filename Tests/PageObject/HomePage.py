@@ -4,18 +4,6 @@ from Tests.PageObject.locators import BasePageLocators, AboutUsPageLocators, Ser
 
 
 class HomePage(BasePage):
-    def button_go_home(self):
-        self.click_on_button(*BasePageLocators.BUTTON_GO_BASE_PAGE)
-        assert self.is_element_present(*BasePageLocators.IMAGE)
-
-    def button_go_aboutus(self):
-        self.click_on_button(*BasePageLocators.BUTTON_GO_ABOUTUS_PAGE)
-        assert self.is_element_present(*BasePageLocators.LINK)
-
-    def button_go_contact(self):
-        self.click_on_button(*BasePageLocators.BUTTON_GO_CONTACT_PAGE)
-        assert self.is_element_present(*BasePageLocators.MESSAGE)
-
     def button_go_about_us(self):
         self.click_on_button(*BasePageLocators.BUTTON_ABOUT_US)
         assert self.is_element_present(*AboutUsPageLocators.LINK)

@@ -10,38 +10,49 @@ class RegisterPage(BasePage):
     def should_be_form(self):
         assert self.is_element_present(*RegisterPageLocators.CUSTOMER_FORM), "Customer form is not present"
 
+    @property
     def add_first_name(self):
-        self.browser.find_element(*RegisterPageLocators.FIELD_FIRST_NAME)
+        return self.browser.find_element(*RegisterPageLocators.FIELD_FIRST_NAME)
 
+    @property
     def add_last_name(self):
-        self.browser.find_element(*RegisterPageLocators.FIELD_LAST_NAME)
+        return self.browser.find_element(*RegisterPageLocators.FIELD_LAST_NAME)
 
+    @property
     def add_address(self):
-        self.browser.find_element(*RegisterPageLocators.FIELD_ADDRESS)
+        return self.browser.find_element(*RegisterPageLocators.FIELD_ADDRESS)
 
+    @property
     def add_city(self):
-        self.browser.find_element(*RegisterPageLocators.FIELD_CITY)
+        return self.browser.find_element(*RegisterPageLocators.FIELD_CITY)
 
+    @property
     def add_state(self):
-        self.browser.find_element(*RegisterPageLocators.FIELD_STATE)
+        return self.browser.find_element(*RegisterPageLocators.FIELD_STATE)
 
+    @property
     def add_zipcode(self):
-        self.browser.find_element(*RegisterPageLocators.FIELD_ZIPCODE)
+        return self.browser.find_element(*RegisterPageLocators.FIELD_ZIPCODE)
 
+    @property
     def add_phone(self):
-        self.browser.find_element(*RegisterPageLocators.FIELD_PHONE)
+        return self.browser.find_element(*RegisterPageLocators.FIELD_PHONE)
 
+    @property
     def add_snn(self):
-        self.browser.find_element(*RegisterPageLocators.FIELD_SNN)
+        return self.browser.find_element(*RegisterPageLocators.FIELD_SNN)
 
+    @property
     def add_username(self):
-        self.browser.find_element(*RegisterPageLocators.FIELD_USERNAME)
+        return self.browser.find_element(*RegisterPageLocators.FIELD_USERNAME)
 
+    @property
     def add_password(self):
-        self.browser.find_element(*RegisterPageLocators.FIELD_PASSWORD)
+        return self.browser.find_element(*RegisterPageLocators.FIELD_PASSWORD)
 
+    @property
     def add_confirm(self):
-        self.browser.find_element(*RegisterPageLocators.FIELD_CONFIRM)
+        return self.browser.find_element(*RegisterPageLocators.FIELD_CONFIRM)
 
     def press_the_button_register(self):
         self.click_on_button(*RegisterPageLocators.BUTTON_REGISTER)
