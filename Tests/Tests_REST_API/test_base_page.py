@@ -23,7 +23,7 @@ class TestParaBank(ParaBankHomePage):
     def test_negative_post_new_account(self):
         response = self.post(f"{DataEndPoints.base_uri + DataEndPoints.newAccount1 + DataTest.new_account_id}"
                              f"{DataEndPoints.newAccount2 + DataTest.newAccountType}"
-                             f"{DataEndPoints.newAccount2 + DataTest.customerId}")
+                             f"{DataEndPoints.newAccount3 + DataTest.newAccountType}")
         assert response.text == f'Could not create new account for customer {DataTest.new_account_id} from account ' \
                                 f'{DataTest.newAccountType}'
         assert response.status_code == 400, "           Can't get response 200 for new account"
