@@ -20,7 +20,7 @@ class TestParaBank(ParaBankHomePage):
         assert response.text == f"Successfully deposited ${DataTest.amount} to account #{DataTest.customerId}"
         assert response.status_code == 200, "           Can't get response 200 for new deposit"
 
-    def test_post_new_account(self):
+    def test_negative_post_new_account(self):
         response = self.post(f"{DataEndPoints.base_uri + DataEndPoints.newAccount1 + DataTest.new_account_id}"
                              f"{DataEndPoints.newAccount2 + DataTest.newAccountType}"
                              f"{DataEndPoints.newAccount2 + DataTest.customerId}")
