@@ -1,10 +1,11 @@
 from selenium.webdriver.common.by import By
 
 
-class BasePageLocators:
+class HomePageLocators:
     MESSAGE = (By.CSS_SELECTOR, '#message')
     LINK = (By.CSS_SELECTOR, '#rightPanel > p:nth-child(4) > a')
     IMAGE = (By.CSS_SELECTOR, 'span.services')
+    IMAGE_LATEST_NEWS = (By.CSS_SELECTOR, '#rightPanel > h4')
     FIELD_USERNAME = (By.CSS_SELECTOR, 'input[name="username"]')
     FIELD_PASSWORD = (By.CSS_SELECTOR, 'input[name="password"]')
     TEXT = (By.CSS_SELECTOR, 'body > pre')

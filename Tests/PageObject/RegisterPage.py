@@ -1,5 +1,5 @@
 from Tests.PageObject.HomePage import HomePage
-from Tests.PageObject.locators import RegisterPageLocators, BasePageLocators
+from Tests.PageObject.locators import RegisterPageLocators, HomePageLocators
 
 
 class RegisterPage(HomePage):
@@ -50,7 +50,7 @@ class RegisterPage(HomePage):
 
     @property
     def button_go_to_register(self):
-        return self.browser.find_element(*BasePageLocators.BUTTON_REGISTER)
+        return self.browser.find_element(*HomePageLocators.BUTTON_REGISTER)
 
     @property
     def button_register(self):

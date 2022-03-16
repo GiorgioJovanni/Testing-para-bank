@@ -19,6 +19,7 @@ def test_guest_can_register(page_register):
     page_register.button_register.click()
     assert page_register.should_not_be_button_register
     page_register.button_log_out.click()
+    assert page_register.should_be_on_home_page
 
 
 def test_guest_use_buttons_gohome_contact_aboutus_from_register_page(page_register):

@@ -34,9 +34,11 @@ def test_guest_use_button_locations(page_home):
     page_home.button_go_locations.click()
     assert page_home.should_be_logo_go_locations
     page_home.open()
+    assert page_home.should_be_on_home_page
 
 
 def test_guest_use_button_products(page_home):
     page_home.button_go_products.click()
     assert page_home.should_be_logo_go_products
     page_home.open()
+    assert page_home.should_be_on_home_page
