@@ -18,6 +18,7 @@ def test_guest_can_register(page_register):
     page_register.add_confirm.send_keys(Data.password)
     page_register.button_register.click()
     page_register.should_not_be_button_register()
+    page_register.button_log_out.click()
 
 
 def test_guest_use_buttons_gohome_contact_aboutus_from_register_page(page_register):

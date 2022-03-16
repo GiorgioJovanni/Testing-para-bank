@@ -62,6 +62,10 @@ class RegisterPage(HomePage):
     def button_register(self):
         return self.browser.find_element(*RegisterPageLocators.BUTTON_REGISTER)
 
+    @property
+    def button_log_out(self):
+        return self.browser.find_element(*RegisterPageLocators.BUTTON_LOG_OUT)
+
     def should_not_be_button_register(self):
         assert self.is_not_element_present(*RegisterPageLocators.BUTTON_REGISTER), "Button register is not disappear"
 
