@@ -2,8 +2,6 @@ from selenium.common.exceptions import NoSuchElementException, TimeoutException
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
-from Tests.PageObject.locators import BasePageLocators
-
 
 class BasePage:
     def __init__(self, browser, url, timeout=10):
@@ -37,18 +35,3 @@ class BasePage:
 
     def open(self):
         self.browser.get(self.url)
-
-    def click_on_button(self, how, what):
-        self.browser.find_element(how, what).click()
-
-    def button_go_home(self):
-        self.click_on_button(*BasePageLocators.BUTTON_GO_BASE_PAGE)
-        assert self.is_element_present(*BasePageLocators.IMAGE)
-
-    def button_go_aboutus(self):
-        self.click_on_button(*BasePageLocators.BUTTON_GO_ABOUTUS_PAGE)
-        assert self.is_element_present(*BasePageLocators.LINK)
-
-    def button_go_contact(self):
-        self.click_on_button(*BasePageLocators.BUTTON_GO_CONTACT_PAGE)
-        assert self.is_element_present(*BasePageLocators.MESSAGE)

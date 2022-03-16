@@ -1,8 +1,8 @@
-from Tests.PageObject.BasePage import BasePage
+from Tests.PageObject.HomePage import HomePage
 from Tests.PageObject.locators import RegisterPageLocators, BasePageLocators
 
 
-class RegisterPage(BasePage):
+class RegisterPage(HomePage):
 
     def should_be_panel(self):
         assert self.is_element_present(*RegisterPageLocators.RIGHT_PANEL), "Right panel is not present"
@@ -54,11 +54,13 @@ class RegisterPage(BasePage):
     def add_confirm(self):
         return self.browser.find_element(*RegisterPageLocators.FIELD_CONFIRM)
 
-    def press_the_button_register(self):
-        self.click_on_button(*RegisterPageLocators.BUTTON_REGISTER)
+    @property
+    def button_go_to_register(self):
+        return self.browser.find_element(*BasePageLocators.BUTTON_REGISTER)
 
-    def press_the_button_go_to_register(self):
-        self.click_on_button(*BasePageLocators.BUTTON_REGISTER)
+    @property
+    def button_register(self):
+        return self.browser.find_element(*RegisterPageLocators.BUTTON_REGISTER)
 
     def should_not_be_button_register(self):
         assert self.is_not_element_present(*RegisterPageLocators.BUTTON_REGISTER), "Button register is not disappear"

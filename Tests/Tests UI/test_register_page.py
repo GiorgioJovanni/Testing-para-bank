@@ -2,7 +2,7 @@ from Tests.PageObject.Constants import Data
 
 
 def test_guest_can_register(page_register):
-    page_register.press_the_button_go_to_register()
+    page_register.button_go_to_register.click()
     page_register.should_be_panel()
     page_register.should_be_form()
     page_register.add_first_name.send_keys(Data.first_name)
@@ -16,25 +16,25 @@ def test_guest_can_register(page_register):
     page_register.add_username.send_keys(f"-1{Data.first_name}1-")
     page_register.add_password.send_keys(Data.password)
     page_register.add_confirm.send_keys(Data.password)
-    page_register.press_the_button_register()
+    page_register.button_register.click()
     page_register.should_not_be_button_register()
 
 
 def test_guest_use_buttons_gohome_contact_aboutus_from_register_page(page_register):
-    page_register.press_the_button_go_to_register()
+    page_register.button_go_to_register.click()
     page_register.should_be_panel()
     page_register.should_be_form()
     page_register.button_go_home()
     page_register.open()
-    page_register.press_the_button_go_to_register()
+    page_register.button_go_to_register.click()
     page_register.button_go_contact()
     page_register.open()
-    page_register.press_the_button_go_to_register()
+    page_register.button_go_to_register.click()
     page_register.button_go_aboutus()
 
 
 def test_negative_guest_can_register_address(page_register):
-    page_register.press_the_button_go_to_register()
+    page_register.button_go_to_register.click()
     page_register.should_be_panel()
     page_register.should_be_form()
     page_register.add_first_name.send_keys(Data.first_name)
@@ -47,12 +47,12 @@ def test_negative_guest_can_register_address(page_register):
     page_register.add_username.send_keys(f"-1{Data.first_name}1-")
     page_register.add_password.send_keys(Data.password)
     page_register.add_confirm.send_keys(Data.password)
-    page_register.press_the_button_register()
+    page_register.button_register.click()
     page_register.should_be_text_error_address()
 
 
 def test_negative_guest_can_register_city(page_register):
-    page_register.press_the_button_go_to_register()
+    page_register.button_go_to_register.click()
     page_register.should_be_panel()
     page_register.should_be_form()
     page_register.add_first_name.send_keys(Data.first_name)
@@ -65,12 +65,12 @@ def test_negative_guest_can_register_city(page_register):
     page_register.add_username.send_keys(f"-1{Data.first_name}1-")
     page_register.add_password.send_keys(Data.password)
     page_register.add_confirm.send_keys(Data.password)
-    page_register.press_the_button_register()
+    page_register.button_register.click()
     page_register.should_be_text_error_city()
 
 
 def test_negative_guest_can_register_state(page_register):
-    page_register.press_the_button_go_to_register()
+    page_register.button_go_to_register.click()
     page_register.should_be_panel()
     page_register.should_be_form()
     page_register.add_first_name.send_keys(Data.first_name)
@@ -83,12 +83,12 @@ def test_negative_guest_can_register_state(page_register):
     page_register.add_username.send_keys(f"-1{Data.first_name}1-")
     page_register.add_password.send_keys(Data.password)
     page_register.add_confirm.send_keys(Data.password)
-    page_register.press_the_button_register()
+    page_register.button_register.click()
     page_register.should_be_text_error_state()
 
 
 def test_negative_guest_can_register_zipcode(page_register):
-    page_register.press_the_button_go_to_register()
+    page_register.button_go_to_register.click()
     page_register.should_be_panel()
     page_register.should_be_form()
     page_register.add_first_name.send_keys(Data.first_name)
@@ -101,5 +101,5 @@ def test_negative_guest_can_register_zipcode(page_register):
     page_register.add_username.send_keys(f"-1{Data.first_name}1-")
     page_register.add_password.send_keys(Data.password)
     page_register.add_confirm.send_keys(Data.password)
-    page_register.press_the_button_register()
+    page_register.button_register.click()
     page_register.should_be_text_error_zipcode()
