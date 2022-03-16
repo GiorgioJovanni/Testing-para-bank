@@ -39,7 +39,7 @@ class RegisterPageLocators:
     FIELD_PASSWORD = (By.CSS_SELECTOR, '[name="customer.password"]')
     FIELD_CONFIRM = (By.CSS_SELECTOR, '[name="repeatedPassword"]')
     BUTTON_REGISTER = (By.CSS_SELECTOR, '[value="Register"]')
-    BUTTON_LOG_OUT = (By.XPATH, '//*[@id="leftPanel"]/ul/li[8]/a')
+    BUTTON_LOG_OUT = (By.CSS_SELECTOR, '[href="/parabank/logout.htm"]')
 
     TEXT_ERROR_ADDRESS = (By.CSS_SELECTOR, '#customerForm > table > tbody > tr:nth-child(3) >'
                                            ' td:nth-child(3) span.error')
@@ -62,7 +62,8 @@ class ServicesPageLocators:
 
 
 class ProductsAndLocationsPageLocators:
-    LOGO = (By.CSS_SELECTOR, 'div.home-logo img[src="https://www.parasoft.com/wp-content/uploads/2020/06/parasoft.svg"]')
+    LOGO = (By.CSS_SELECTOR, 'div.home-logo img[src="https://www.parasoft.com/'
+                             'wp-content/uploads/2020/06/parasoft.svg"]')
 
 
 class AdminPagePageLocators:
