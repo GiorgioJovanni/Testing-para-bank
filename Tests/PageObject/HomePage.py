@@ -40,38 +40,50 @@ class HomePage(BasePage):
     def press_the_button_register_base(self):
         return self.browser.find_element(*BasePageLocators.BUTTON_REGISTER)
 
+    @property
     def should_be_image_go_home(self):
-        assert self.is_element_present(*BasePageLocators.IMAGE)
+        return self.is_element_present(*BasePageLocators.IMAGE)
 
+    @property
     def should_be_link_go_aboutus(self):
-        assert self.is_element_present(*BasePageLocators.LINK)
+        return self.is_element_present(*BasePageLocators.LINK)
 
+    @property
     def should_be_message_go_contact(self):
-        assert self.is_element_present(*BasePageLocators.MESSAGE)
+        return self.is_element_present(*BasePageLocators.MESSAGE)
 
+    @property
     def should_be_link_go_about_us(self):
-        assert self.is_element_present(*AboutUsPageLocators.LINK)
+        return self.is_element_present(*AboutUsPageLocators.LINK)
 
+    @property
     def should_be_soap_go_services(self):
-        assert self.is_element_present(*ServicesPageLocators.HEADER_AVAILABLE_BOOKSTORE_SOAP)
+        return self.is_element_present(*ServicesPageLocators.HEADER_AVAILABLE_BOOKSTORE_SOAP)
 
+    @property
     def should_be_bookstore_go_services(self):
-        assert self.is_element_present(*ServicesPageLocators.HEADER_BOOKSTORE)
+        return self.is_element_present(*ServicesPageLocators.HEADER_BOOKSTORE)
 
+    @property
     def should_be_parabank_soap_go_services(self):
-        assert self.is_element_present(*ServicesPageLocators.HEADER_PARABANK_SOAP)
+        return self.is_element_present(*ServicesPageLocators.HEADER_PARABANK_SOAP)
 
+    @property
     def should_be_parabank_go_services(self):
-        assert self.is_element_present(*ServicesPageLocators.HEADER_PARABANK)
+        return self.is_element_present(*ServicesPageLocators.HEADER_PARABANK)
 
+    @property
     def should_be_restful_go_services(self):
-        assert self.is_element_present(*ServicesPageLocators.HEADER_RESTFUL)
+        return self.is_element_present(*ServicesPageLocators.HEADER_RESTFUL)
 
+    @property
     def should_be_logo_go_products(self):
-        assert self.is_element_present(*ProductsAndLocationsPageLocators.LOGO)
+        return self.is_element_present(*ProductsAndLocationsPageLocators.LOGO)
 
+    @property
     def should_be_logo_go_locations(self):
-        assert self.is_element_present(*ProductsAndLocationsPageLocators.LOGO)
+        return self.is_element_present(*ProductsAndLocationsPageLocators.LOGO)
 
+    @property
     def should_be_header_go_admin_page(self):
-        assert self.is_element_present(*AdminPagePageLocators.BOARD)
+        return self.is_element_present(*AdminPagePageLocators.BOARD)

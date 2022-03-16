@@ -6,7 +6,7 @@ from Tests.PageObject.Constants import EndPoint
 from Tests.PageObject.RegisterPage import RegisterPage
 
 
-@pytest.fixture(scope="session")
+@pytest.fixture(scope="module")
 def page_register():
     print("\nstart browser for test..")
     browser = webdriver.Chrome()
