@@ -17,7 +17,7 @@ def page_register():
     browser.quit()
 
 
-@pytest.fixture
+@pytest.fixture(scope="module")
 def page_home():
     print("\nstart browser for test..")
     browser = webdriver.Chrome()

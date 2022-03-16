@@ -54,15 +54,15 @@ class AboutUsPageLocators:
 
 
 class ServicesPageLocators:
-    HEADER1 = (By.XPATH, '//*[@id="rightPanel"]/span[1]')
-    HEADER2 = (By.XPATH, '//*[@id="rightPanel"]/span[2]')
-    HEADER3 = (By.XPATH, '//*[@id="rightPanel"]/span[3]')
-    HEADER4 = (By.XPATH, '//*[@id="rightPanel"]/span[4]')
-    HEADER5 = (By.XPATH, '//*[@id="rightPanel"]/span[5]')
+    HEADER_AVAILABLE_BOOKSTORE_SOAP = (By.XPATH, '//*[@id="rightPanel"]/span[1]')
+    HEADER_BOOKSTORE = (By.XPATH, '//*[@id="rightPanel"]/span[2]')
+    HEADER_PARABANK_SOAP = (By.XPATH, '//*[@id="rightPanel"]/span[3]')
+    HEADER_PARABANK = (By.XPATH, '//*[@id="rightPanel"]/span[4]')
+    HEADER_RESTFUL = (By.XPATH, '//*[@id="rightPanel"]/span[5]')
 
 
 class ProductsAndLocationsPageLocators:
-    HEADER = (By.XPATH, '/html/body/header/div[1]')
+    LOGO = (By.CSS_SELECTOR, 'div.home-logo img[src="https://www.parasoft.com/wp-content/uploads/2020/06/parasoft.svg"]')
 
 
 class AdminPagePageLocators:

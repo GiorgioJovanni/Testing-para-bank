@@ -25,13 +25,16 @@ def test_guest_use_buttons_gohome_contact_aboutus_from_register_page(page_regist
     page_register.button_go_to_register.click()
     page_register.should_be_panel()
     page_register.should_be_form()
-    page_register.button_go_home()
+    page_register.button_go_home.click()
+    page_register.should_be_image_go_home()
     page_register.open()
     page_register.button_go_to_register.click()
-    page_register.button_go_contact()
+    page_register.button_go_contact.click()
+    page_register.should_be_message_go_contact()
     page_register.open()
     page_register.button_go_to_register.click()
-    page_register.button_go_aboutus()
+    page_register.button_go_aboutus.click()
+    page_register.should_be_link_go_aboutus()
 
 
 def test_negative_guest_can_register_address(page_register):

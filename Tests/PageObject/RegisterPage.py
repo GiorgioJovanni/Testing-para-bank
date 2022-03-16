@@ -4,12 +4,6 @@ from Tests.PageObject.locators import RegisterPageLocators, BasePageLocators
 
 class RegisterPage(HomePage):
 
-    def should_be_panel(self):
-        assert self.is_element_present(*RegisterPageLocators.RIGHT_PANEL), "Right panel is not present"
-
-    def should_be_form(self):
-        assert self.is_element_present(*RegisterPageLocators.CUSTOMER_FORM), "Customer form is not present"
-
     @property
     def add_first_name(self):
         return self.browser.find_element(*RegisterPageLocators.FIELD_FIRST_NAME)
@@ -65,6 +59,12 @@ class RegisterPage(HomePage):
     @property
     def button_log_out(self):
         return self.browser.find_element(*RegisterPageLocators.BUTTON_LOG_OUT)
+
+    def should_be_panel(self):
+        assert self.is_element_present(*RegisterPageLocators.RIGHT_PANEL), "Right panel is not present"
+
+    def should_be_form(self):
+        assert self.is_element_present(*RegisterPageLocators.CUSTOMER_FORM), "Customer form is not present"
 
     def should_not_be_button_register(self):
         assert self.is_not_element_present(*RegisterPageLocators.BUTTON_REGISTER), "Button register is not disappear"
