@@ -37,7 +37,7 @@ class HomePage(BasePage):
         return self.browser.find_element(*BasePageLocators.BUTTON_ADMIN_PAGE)
 
     @property
-    def press_the_button_register_base(self):
+    def button_register_base(self):
         return self.browser.find_element(*BasePageLocators.BUTTON_REGISTER)
 
     @property

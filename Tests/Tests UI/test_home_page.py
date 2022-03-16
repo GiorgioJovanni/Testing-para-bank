@@ -2,11 +2,11 @@ def test_guest_use_buttons_gohome_contact_aboutus_from_register_page(page_home):
     page_home.button_go_home.click()
     assert page_home.should_be_image_go_home
     page_home.open()
-    page_home.press_the_button_register_base.click()
+    page_home.button_register_base.click()
     page_home.button_go_contact.click()
     assert page_home.should_be_message_go_contact
     page_home.open()
-    page_home.press_the_button_register_base.click()
+    page_home.button_register_base.click()
     page_home.button_go_aboutus.click()
     assert page_home.should_be_link_go_aboutus
 
