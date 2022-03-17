@@ -62,28 +62,28 @@ class RegisterPage(HomePage):
 
     @property
     def should_be_panel(self):
-        return self.is_element_present(*RegisterPageLocators.RIGHT_PANEL), "Right panel is not present"
+        return self.is_element_present(*RegisterPageLocators.RIGHT_PANEL)
 
     @property
     def should_be_form(self):
-        return self.is_element_present(*RegisterPageLocators.CUSTOMER_FORM), "Customer form is not present"
+        return self.is_element_present(*RegisterPageLocators.CUSTOMER_FORM)
 
     @property
     def should_not_be_button_register(self):
-        return self.is_not_element_present(*RegisterPageLocators.BUTTON_REGISTER), "Button register is not disappear"
+        return self.is_not_element_present(*RegisterPageLocators.BUTTON_REGISTER)
 
     @property
     def should_be_text_error_address(self):
-        return self.is_element_present(*RegisterPageLocators.TEXT_ERROR_ADDRESS), "Text error is not present"
+        return self.is_element_present(*RegisterPageLocators.TEXT_ERROR_ADDRESS)
 
     @property
     def should_be_text_error_city(self):
-        return self.is_element_present(*RegisterPageLocators.TEXT_ERROR_CITY), "Text error is not present"
+        return self.is_element_present(*RegisterPageLocators.TEXT_ERROR_CITY)
 
     @property
     def should_be_text_error_state(self):
-        return self.is_element_present(*RegisterPageLocators.TEXT_ERROR_STATE), "Text error is not present"
+        return self.is_element_present(*RegisterPageLocators.TEXT_ERROR_STATE)
 
     @property
     def should_be_text_error_zipcode(self):
-        return self.is_element_present(*RegisterPageLocators.TEXT_ERROR_ZIPCODE), "Text error is not present"
+        return self.is_element_present(*RegisterPageLocators.TEXT_ERROR_ZIPCODE)
