@@ -1,5 +1,5 @@
 from Tests.PageObject.HomePage import HomePage
-from Tests.PageObject.locators import RegisterPageLocators, HomePageLocators
+from Tests.PageObject.locators import RegisterPageLocators, HomePageLocators, UserPageLocators
 
 
 class RegisterPage(HomePage):
@@ -87,3 +87,35 @@ class RegisterPage(HomePage):
     @property
     def should_be_text_error_zipcode(self):
         return self.is_element_present(*RegisterPageLocators.TEXT_ERROR_ZIPCODE)
+
+    @property
+    def button_open_new_account(self):
+        return self.browser.find_element(*UserPageLocators.OPEN_NEW_ACCOUNT)
+
+    @property
+    def should_be_slider_type(self):
+        return self.is_element_present(*UserPageLocators.TYPE)
+
+    @property
+    def slider_type(self):
+        return self.browser.find_element(*UserPageLocators.TYPE)
+
+    @property
+    def should_be_slider_from_account(self):
+        return self.is_element_present(*UserPageLocators.FROM_ACCOUNT)
+
+    @property
+    def slider_from_account(self):
+        return self.browser.find_element(*UserPageLocators.FROM_ACCOUNT)
+
+    @property
+    def should_be_button_open_new_account(self):
+        return self.is_element_present(*UserPageLocators.BUTTON_OPEN_NEW_ACCOUNT)
+
+    @property
+    def button_overview(self):
+        return self.browser.find_element(*UserPageLocators.OVERVIEW)
+
+    @property
+    def button_transfer_funds(self):
+        return self.browser.find_element(*UserPageLocators.TRANSFER_FUNDS)

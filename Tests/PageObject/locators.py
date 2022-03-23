@@ -69,3 +69,24 @@ class ProductsAndLocationsPageLocators:
 
 class AdminPagePageLocators:
     BOARD = (By.CSS_SELECTOR, '#adminForm .form')
+
+
+class UserPageLocators:
+    OPEN_NEW_ACCOUNT = (By.CSS_SELECTOR, '[href="/parabank/openaccount.htm"]')
+    OVERVIEW = (By.CSS_SELECTOR, '[href="/parabank/overview.htm"]')
+    TRANSFER_FUNDS = (By.CSS_SELECTOR, '[href="/parabank/transfer.htm"]')
+    BILL_PAY = (By.CSS_SELECTOR, '[href="/parabank/billpay.htm"]')
+    FIND_TRANSACTIONS = (By.CSS_SELECTOR, '[href="/parabank/findtrans.htm"]')
+    UPDATE_CONTACT_INFO = (By.CSS_SELECTOR, '[href="/parabank/updateprofile.htm"]')
+    REQUEST_LOAN = (By.CSS_SELECTOR, '[href="/parabank/requestloan.htm"]')
+    LOG_OUT = (By.CSS_SELECTOR, '[href="/parabank/logout.htm"]')
+
+    TYPE = (By.CSS_SELECTOR, 'select#type')
+    FROM_ACCOUNT = (By.CSS_SELECTOR, 'select#fromAccountId')
+    BUTTON_OPEN_NEW_ACCOUNT = (By.CSS_SELECTOR, 'input[value="Open New Account"]')
+
+    BALANCE = (By.CSS_SELECTOR, 'b.ng-binding')
+    NUMBER_ACCOUNT = (By.CSS_SELECTOR, 'a.ng-binding')
+
+    AMOUNT = (By.CSS_SELECTOR, 'input#amount')
+    BUTTON_TRANSFER = (By.CSS_SELECTOR, 'input[type="submit"][value="Transfer"]')
