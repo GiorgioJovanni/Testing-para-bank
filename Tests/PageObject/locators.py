@@ -82,11 +82,14 @@ class UserPageLocators:
     LOG_OUT = (By.CSS_SELECTOR, '[href="/parabank/logout.htm"]')
 
     TYPE = (By.CSS_SELECTOR, 'select#type')
+    TYPE_SAVING = 'option[value="1"]'
     FROM_ACCOUNT = (By.CSS_SELECTOR, 'select#fromAccountId')
-    BUTTON_OPEN_NEW_ACCOUNT = (By.CSS_SELECTOR, 'input[value="Open New Account"]')
+    BUTTON_OPEN_NEW_ACCOUNT = (By.CSS_SELECTOR, 'input[type="submit"]')
+    NEW_ID_ACCOUNT = (By.CSS_SELECTOR, '#newAccountId')
 
     BALANCE = (By.CSS_SELECTOR, 'b.ng-binding')
     NUMBER_ACCOUNT = (By.CSS_SELECTOR, 'a.ng-binding')
 
     AMOUNT = (By.CSS_SELECTOR, 'input#amount')
     BUTTON_TRANSFER = (By.CSS_SELECTOR, 'input[type="submit"][value="Transfer"]')
+    TO_ACCOUNT = (By.CSS_SELECTOR, 'span#toAccountId')

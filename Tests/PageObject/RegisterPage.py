@@ -1,3 +1,4 @@
+from selenium.webdriver.support.ui import Select
 from Tests.PageObject.HomePage import HomePage
 from Tests.PageObject.locators import RegisterPageLocators, HomePageLocators, UserPageLocators
 
@@ -100,9 +101,25 @@ class RegisterPage(HomePage):
     def slider_type(self):
         return self.browser.find_element(*UserPageLocators.TYPE)
 
+    def slider_type_checking(self):
+        adb = Select(self.browser.find_element(*UserPageLocators.TYPE))
+        adb.select_by_value('0')
+
+    def slider_type_saving(self):
+        adb = Select(self.browser.find_element(*UserPageLocators.TYPE))
+        adb.select_by_value('1')
+
+    @property
+    def should_be_new_id_account(self):
+        return self.is_element_present(*UserPageLocators.NEW_ID_ACCOUNT)
+
     @property
     def should_be_slider_from_account(self):
         return self.is_element_present(*UserPageLocators.FROM_ACCOUNT)
+
+    @property
+    def should_be_slider_to_account(self):
+        return self.is_element_present(*UserPageLocators.TO_ACCOUNT)
 
     @property
     def slider_from_account(self):
@@ -113,9 +130,37 @@ class RegisterPage(HomePage):
         return self.is_element_present(*UserPageLocators.BUTTON_OPEN_NEW_ACCOUNT)
 
     @property
+    def button_register_new_account(self):
+        return self.browser.find_element(*UserPageLocators.BUTTON_OPEN_NEW_ACCOUNT)
+
+    @property
     def button_overview(self):
         return self.browser.find_element(*UserPageLocators.OVERVIEW)
 
     @property
+    def should_be_text_balance(self):
+        return self.is_element_present(*UserPageLocators.BALANCE)
+
+    @property
+    def should_be_text_id_account(self):
+        return self.is_element_present(*UserPageLocators.NUMBER_ACCOUNT)
+
+    @property
     def button_transfer_funds(self):
         return self.browser.find_element(*UserPageLocators.TRANSFER_FUNDS)
+
+    @property
+    def should_be_amount(self):
+        return self.is_element_present(*UserPageLocators.AMOUNT)
+
+    @property
+    def box_amount(self):
+        return self.browser.find_element(*UserPageLocators.AMOUNT)
+
+    @property
+    def should_be_button_transfer(self):
+        return self.is_element_present(*UserPageLocators.BUTTON_TRANSFER)
+
+    @property
+    def button_transfer(self):
+        return self.browser.find_element(*UserPageLocators.BUTTON_TRANSFER)

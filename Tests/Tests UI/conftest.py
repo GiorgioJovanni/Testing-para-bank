@@ -28,6 +28,17 @@ def page_home():
     browser.quit()
 
 
+@pytest.fixture(scope="module")
+def page_user():
+    print("\nstart browser for test..")
+    browser = webdriver.Chrome()
+    page = RegisterPage(browser, EndPoint.base_link)
+    page.open()
+    yield page
+    print("\nquit browser..")
+    browser.quit()
+
+
 @pytest.fixture(scope="function")
 def browser():
     print("\nstart browser for test..")
