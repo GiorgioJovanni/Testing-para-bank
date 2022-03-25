@@ -81,15 +81,30 @@ class UserPageLocators:
     REQUEST_LOAN = (By.CSS_SELECTOR, '[href="/parabank/requestloan.htm"]')
     LOG_OUT = (By.CSS_SELECTOR, '[href="/parabank/logout.htm"]')
 
+    'OPEN_NEW_ACCOUNT'
     TYPE = (By.CSS_SELECTOR, 'select#type')
-    TYPE_SAVING = 'option[value="1"]'
     FROM_ACCOUNT = (By.CSS_SELECTOR, 'select#fromAccountId')
     BUTTON_OPEN_NEW_ACCOUNT = (By.CSS_SELECTOR, 'input[type="submit"]')
     NEW_ID_ACCOUNT = (By.CSS_SELECTOR, '#newAccountId')
 
+    'OVERVIEW'
     BALANCE = (By.CSS_SELECTOR, 'b.ng-binding')
     NUMBER_ACCOUNT = (By.CSS_SELECTOR, 'a.ng-binding')
 
+    'TRANSFER_FUNDS'
     AMOUNT = (By.CSS_SELECTOR, 'input#amount')
     BUTTON_TRANSFER = (By.CSS_SELECTOR, 'input[type="submit"][value="Transfer"]')
     TO_ACCOUNT = (By.CSS_SELECTOR, 'span#toAccountId')
+
+    'BILL_PAY'
+    PAYEE_NAME = (By.CSS_SELECTOR, '[ng-model="payee.name"]')
+    ADDRESS = (By.CSS_SELECTOR, '[ng-model="payee.address.street"]')
+    CITY = (By.CSS_SELECTOR, '[ng-model="payee.address.city"]')
+    STATE = (By.CSS_SELECTOR, '[ng-model="payee.address.state"]')
+    ZIP_CODE = (By.CSS_SELECTOR, 'ng-model="payee.address.zipCode"')
+    PHONE = (By.CSS_SELECTOR, 'ng-model="payee.phoneNumber"')
+    ACCOUNT = (By.CSS_SELECTOR, '[ng-model="payee.accountNumber"]')
+    VERIFY_ACCOUNT = (By.CSS_SELECTOR, '[ng-model="verifyAccount"]')
+    AMOUNT_BILL = (By.CSS_SELECTOR, '[ng-model="amount"]')
+    BUTTON_SEND_PAYMENT = (By.CSS_SELECTOR, 'input.button[value="Send Payment"]')
+

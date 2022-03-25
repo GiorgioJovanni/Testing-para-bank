@@ -164,3 +164,55 @@ class RegisterPage(HomePage):
     @property
     def button_transfer(self):
         return self.browser.find_element(*UserPageLocators.BUTTON_TRANSFER)
+
+    @property
+    def button_bill_pay(self):
+        return self.browser.find_element(*UserPageLocators.BILL_PAY)
+
+    @property
+    def box_payee_name(self):
+        return self.browser.find_element(*UserPageLocators.PAYEE_NAME)
+
+    @property
+    def box_address(self):
+        return self.browser.find_element(*UserPageLocators.ADDRESS)
+
+    @property
+    def box_city(self):
+        return self.browser.find_element(*UserPageLocators.CITY)
+
+    @property
+    def box_state(self):
+        return self.browser.find_element(*UserPageLocators.STATE)
+
+    @property
+    def box_zip_code(self):
+        return self.browser.find_element(*UserPageLocators.ZIP_CODE)
+
+    @property
+    def box_phone(self):
+        return self.browser.find_element(*UserPageLocators.PHONE)
+
+    @property
+    def box_account(self):
+        return self.browser.find_element(*UserPageLocators.ACCOUNT)
+
+    @property
+    def box_verify_account(self):
+        return self.browser.find_element(*UserPageLocators.VERIFY_ACCOUNT)
+
+    @property
+    def box_amount_bill(self):
+        return self.browser.find_element(*UserPageLocators.AMOUNT_BILL)
+
+    @property
+    def button_send_payment(self):
+        return self.browser.find_element(*UserPageLocators.BUTTON_SEND_PAYMENT)
+
+    @property
+    def should_be_button_send_payment(self):
+        return self.is_element_present(*UserPageLocators.BUTTON_SEND_PAYMENT)
+
+    @property
+    def should_be_box_payee_name(self):
+        return self.is_element_present(*UserPageLocators.PAYEE_NAME)

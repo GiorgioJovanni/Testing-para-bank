@@ -34,7 +34,7 @@ def test_user_can_open_new_saving_account(page_user):
     page_user.slider_type_saving()
     time.sleep(1)
     page_user.button_register_new_account.click()
-    assert page_user.should_be_new_id_account
+    assert page_user.should_be_new_id_account, "New id account is not present"
 
 
 def test_user_can_open_new_checking_account(page_user):
@@ -42,19 +42,19 @@ def test_user_can_open_new_checking_account(page_user):
     page_user.slider_type_checking()
     time.sleep(1)
     page_user.button_register_new_account.click()
-    assert page_user.should_be_new_id_account
+    assert page_user.should_be_new_id_account, "New id account is not present"
 
 
 def test_user_can_go_accounts_overview(page_user):
     page_user.button_overview.click()
-    assert page_user.should_be_text_balance
-    assert page_user.should_be_text_id_account
+    assert page_user.should_be_text_balance, "Text balance is not present"
+    assert page_user.should_be_text_id_account, "Text id account is not present"
 
 
 def test_user_can_go_transfer(page_user):
     page_user.button_transfer_funds.click()
-    assert page_user.should_be_amount
-    assert page_user.should_be_button_transfer
+    assert page_user.should_be_amount, "Amount is not present"
+    assert page_user.should_be_button_transfer, "Button transfer is not present"
 
 
 def test_user_transfer(page_user):
@@ -62,6 +62,11 @@ def test_user_transfer(page_user):
     time.sleep(1)
     page_user.box_amount.send_keys(Data.amount)
     page_user.button_transfer.click()
-    assert page_user.should_be_slider_from_account
-    assert page_user.should_be_slider_to_account
+    assert page_user.should_be_slider_from_account, "Slider from account is not present"
+    assert page_user.should_be_slider_to_account, "Slider to account is not present"
 
+
+def test_guest_can_go_bill_pay(page_user):
+    page_user.button_bill_pay.click()
+    assert page_user.should_be_button_send_payment, "Button send payment is not present"
+    assert page_user.should_be_box_payee_name, "Box payee name is not present"
