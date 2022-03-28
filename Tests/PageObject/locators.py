@@ -69,3 +69,42 @@ class ProductsAndLocationsPageLocators:
 
 class AdminPagePageLocators:
     BOARD = (By.CSS_SELECTOR, '#adminForm .form')
+
+
+class UserPageLocators:
+    OPEN_NEW_ACCOUNT = (By.CSS_SELECTOR, '[href="/parabank/openaccount.htm"]')
+    OVERVIEW = (By.CSS_SELECTOR, '[href="/parabank/overview.htm"]')
+    TRANSFER_FUNDS = (By.CSS_SELECTOR, '[href="/parabank/transfer.htm"]')
+    BILL_PAY = (By.CSS_SELECTOR, '[href="/parabank/billpay.htm"]')
+    FIND_TRANSACTIONS = (By.CSS_SELECTOR, '[href="/parabank/findtrans.htm"]')
+    UPDATE_CONTACT_INFO = (By.CSS_SELECTOR, '[href="/parabank/updateprofile.htm"]')
+    REQUEST_LOAN = (By.CSS_SELECTOR, '[href="/parabank/requestloan.htm"]')
+    LOG_OUT = (By.CSS_SELECTOR, '[href="/parabank/logout.htm"]')
+
+    'OPEN_NEW_ACCOUNT'
+    TYPE = (By.CSS_SELECTOR, 'select#type')
+    FROM_ACCOUNT = (By.CSS_SELECTOR, 'select#fromAccountId')
+    BUTTON_OPEN_NEW_ACCOUNT = (By.CSS_SELECTOR, 'input[type="submit"]')
+    NEW_ID_ACCOUNT = (By.CSS_SELECTOR, '#newAccountId')
+
+    'OVERVIEW'
+    BALANCE = (By.CSS_SELECTOR, 'b.ng-binding')
+    NUMBER_ACCOUNT = (By.CSS_SELECTOR, 'a.ng-binding')
+
+    'TRANSFER_FUNDS'
+    AMOUNT = (By.CSS_SELECTOR, 'input#amount')
+    BUTTON_TRANSFER = (By.CSS_SELECTOR, 'input[type="submit"][value="Transfer"]')
+    TO_ACCOUNT = (By.CSS_SELECTOR, 'span#toAccountId')
+
+    'BILL_PAY'
+    PAYEE_NAME = (By.CSS_SELECTOR, '[ng-model="payee.name"]')
+    ADDRESS = (By.CSS_SELECTOR, '[ng-model="payee.address.street"]')
+    CITY = (By.CSS_SELECTOR, '[ng-model="payee.address.city"]')
+    STATE = (By.CSS_SELECTOR, '[ng-model="payee.address.state"]')
+    ZIP_CODE = (By.CSS_SELECTOR, 'ng-model="payee.address.zipCode"')
+    PHONE = (By.CSS_SELECTOR, 'ng-model="payee.phoneNumber"')
+    ACCOUNT = (By.CSS_SELECTOR, '[ng-model="payee.accountNumber"]')
+    VERIFY_ACCOUNT = (By.CSS_SELECTOR, '[ng-model="verifyAccount"]')
+    AMOUNT_BILL = (By.CSS_SELECTOR, '[ng-model="amount"]')
+    BUTTON_SEND_PAYMENT = (By.CSS_SELECTOR, 'input.button[value="Send Payment"]')
+
