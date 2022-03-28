@@ -7,8 +7,8 @@ from conftest import browser
 
 
 class CustomerLookupPage(BasePage):
-    def should_be_lookup_page_url(browser):
-        "lookup" in browser.current_url
+    def should_be_lookup_page_url(self):
+        "lookup" in self.browser.current_url
         assert True
 
     def should_be_lookup_page_form(self):
@@ -26,7 +26,7 @@ class CustomerLookupPage(BasePage):
         assert True
 
     def account_validate(self):
-        element = self.find_element(*CustomerLookupPageLocatorsData.FIRST_NAME)
+        element = self.browser.find_element(*CustomerLookupPageLocatorsData.FIRST_NAME)
         element.send_keys('First Name')
 
         element = self.browser.find_element(*CustomerLookupPageLocatorsData.LAST_NAME)
@@ -48,5 +48,5 @@ class CustomerLookupPage(BasePage):
         element.send_keys('1234567890')
         element.send_keys(Keys.RETURN)
 
-        assert "Your login information was located successfully. You are now logged in." in browser.page_source, \
+        assert "Your login information was located successfully. You are now logged in." in self.browser.page_source, \
             'The customer information provided could not be found.'
